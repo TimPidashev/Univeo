@@ -1,9 +1,3 @@
-import fractions
-import statistics
-import random
-import cmath
-import decimal
-import numbers
 import time
 import waste_of_time
 from termcolor import colored

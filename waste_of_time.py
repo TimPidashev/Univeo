@@ -1,6 +1,6 @@
 import time
 
-#dont know why i did this...
+#dont know why i did this...(And i felt like manually writing this out instead of string slicing for some reason...)
 logo = [
     " T",
     " Th",
