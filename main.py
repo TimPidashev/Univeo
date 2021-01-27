@@ -18,7 +18,7 @@ time.sleep(.2)
 still_grading = True
 
 #getting user input
-while still_grading == True:
+while still_grading:
     stars_total = input(colored("Number of stars assignment has: ", "yellow"))
     stars_achieved = input(colored("Number of stars achieved: ", "yellow"))
     avg_acc = input(colored("AVG typing accuracy: ", "cyan"))
