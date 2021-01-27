@@ -5,61 +5,45 @@ import cmath
 import decimal
 import numbers
 import time
+import waste_of_time
 from termcolor import colored
 from pyfiglet import Figlet
 
 #ASCII LOGO
 cool_logo = Figlet(font="graffiti")
-print(colored(cool_logo.renderText("Univeo"), "magenta"))
+print(colored(cool_logo.renderText("Univeo!"), "magenta"))
 time.sleep(.2)
 
-#dont know why i did this...
-logo = [
-    " T",
-    " Th",
-    " The",
-    " The u",
-    " The ul",
-    " The ult",
-    " The ulti",
-    " The ultim",
-    " The ultima",
-    " The ultimat",
-    " The ultimate",
-    " The ultimate T",
-    " The ultimate Ty",
-    " The ultimate Typ",
-    " The ultimate Typi",
-    " The ultimate Typin",
-    " The ultimate Typing",
-    " The ultimate Typing.",
-    " The ultimate Typing.c",
-    " The ultimate Typing.co",
-    " The ultimate Typing.com",
-    " The ultimate Typing.com g",
-    " The ultimate Typing.com gr",
-    " The ultimate Typing.com gra",
-    " The ultimate Typing.com grad",
-    " The ultimate Typing.com gradi",
-    " The ultimate Typing.com gradin",
-    " The ultimate Typing.com grading",
-    " The ultimate Typing.com grading c",
-    " The ultimate Typing.com grading ca",
-    " The ultimate Typing.com grading cal",
-    " The ultimate Typing.com grading calc",
-    " The ultimate Typing.com grading calcu",
-    " The ultimate Typing.com grading calcul",
-    " The ultimate Typing.com grading calcula",
-    " The ultimate Typing.com grading calculat",
-    " The ultimate Typing.com grading calculato",
-    " The ultimate Typing.com grading calculator",
-    " The ultimate Typing.com grading calculator!"
-]
-i = 0
+#loop variable
+still_grading = True
 
-while True:
-    print(logo[i % len(logo)], end="\r")
-    time.sleep(.1)
-    i += 1
-    if i == 39:
+#getting user input
+while still_grading == True:
+    stars_total = input(colored("Number of stars assignment has: ", "yellow"))
+    stars_achieved = input(colored("Number of stars achieved: ", "yellow"))
+    avg_acc = input(colored("AVG typing accuracy: ", "cyan"))
+
+    #calulating percent
+    stars_achieved = float(stars_achieved)
+    stars_total = float(stars_total)
+    stars_percentage = '{0:.2f}'.format((stars_achieved / stars_total * 100))
+
+    #getting an avg between the stars grade and avg accuracy
+    def average(stars_percentage, avg_acc):
+        return (stars_percentage + avg_acc) / 2.0
+
+    avg = average(float(stars_percentage), float(avg_acc))
+
+    #literally just doing checks to get grade specific colors
+    if avg > 90.0:
+        print(colored(f"{avg}", "green"))
+
+    elif avg < 90.0 and avg > 50.0:
+        print(colored(f"{avg}", "yellow"))
+
+    elif avg < 50.0:
+        print(colored(f"{avg}", "red"))
+
+    else:
+        print(colored("A user input error has occured, restart program to continue grading!", "red"))
         break
