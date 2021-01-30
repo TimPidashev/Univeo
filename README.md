@@ -8,7 +8,7 @@ Clone the repository and or download the .zip of this repository
 STEP 2
 CD into the repository either in terminal for linux, or command prompt for windows users. 
 You would accomplish this by typing in these commands in the order they are shown here:
------------
+
 cd Downloads
 
 cd Univeo-main
@@ -16,4 +16,6 @@ cd Univeo-main
 pip install -r requirements.txt
 
 python main.py
-----------
+
+STEP 3
+Enjoy!
