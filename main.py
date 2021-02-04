@@ -1,7 +1,9 @@
 import time
+import os
 import waste_of_time
 from termcolor import colored
 from pyfiglet import Figlet
+os.system('color')
 
 #ASCII LOGO
 cool_logo = Figlet(font="graffiti")
