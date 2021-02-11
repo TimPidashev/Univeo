@@ -18,7 +18,6 @@ while still_grading:
     stars_total = input(colored("Number of stars assignment has: ", "yellow"))
     stars_achieved = input(colored("Number of stars achieved: ", "yellow"))
     avg_acc = input(colored("AVG typing accuracy: ", "cyan"))
-    print(colored("--------------------------------------------------", "magenta")
 
     #calulating percent
     stars_achieved = float(stars_achieved)
@@ -34,12 +33,15 @@ while still_grading:
     #literally just doing checks to get grade specific colors
     if avg > 90.0:
         print(colored(f"{avg}", "green"))
+        print(colored("--------------------------------------------------", "magenta")
 
     elif avg < 90.0 and avg > 50.0:
         print(colored(f"{avg}", "yellow"))
+        print(colored("--------------------------------------------------", "magenta")
 
     elif avg < 50.0:
         print(colored(f"{avg}", "red"))
+        print(colored("--------------------------------------------------", "magenta")
 
     else:
         print(colored("A user input error has occured, restart program to continue grading!", "red"))
