@@ -18,7 +18,7 @@ while still_grading:
     stars_total = input(colored("Number of stars assignment has: ", "yellow"))
     stars_achieved = input(colored("Number of stars achieved: ", "yellow"))
     avg_acc = input(colored("AVG typing accuracy: ", "cyan"))
-    print(colored("--------------------------------------------------")
+    print(colored("--------------------------------------------------", "magenta")
 
     #calulating percent
     stars_achieved = float(stars_achieved)
